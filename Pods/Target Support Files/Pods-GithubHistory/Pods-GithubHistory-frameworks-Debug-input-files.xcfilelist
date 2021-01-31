@@ -1,0 +1,11 @@
+${PODS_ROOT}/Target Support Files/Pods-GithubHistory/Pods-GithubHistory-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Cache/Cache.framework
+${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework
+${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework
+${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework
+${BUILT_PRODUCTS_DIR}/SwiftySwift/SwiftySwift.framework

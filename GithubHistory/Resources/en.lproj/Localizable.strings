@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  GithubHistory
+
+  Created by huangjianwu on 2021/1/31.
+  
+*/
+"git.api.authorizations.url" = "authorizations_url";
+"git.api.code.search.url" = "code_search_url";
+"git.api.commit.search.url" = "commit_search_url";
+"git.api.current.user.authorizations.html.url" = "current_user_authorizations_html_url";
+"git.api.current.user.repositories.url" = "current_user_repositories_url";
+"git.api.current.user.url" = "current_user_url";
+"git.api.emails.url" = "emails_url";
+"git.api.emojis.url" = "emojis_url";
+"git.api.events.url" = "events_url";
+"git.api.feeds.url" = "feeds_url";
+"git.api.followers.url" = "followers_url";
+"git.api.following.url" = "following_url";
+"git.api.gists.url" = "gists_url";
+"git.api.hub.url" = "hub_url";
+"git.api.issue.search.url" = "issue_search_url";
+"git.api.issues.url" = "issues_url";
+"git.api.keys.url" = "keys_url";
+"git.api.label.search.url" = "label_search_url";
+"git.api.notifications.url" = "notifications_url";
+"git.api.organization.repositories.url" = "organization_repositories_url";
+"git.api.organization.teams.url" = "organization_teams_url";
+"git.api.organization.url" = "organization_url";
+"git.api.public.gists.url" = "public_gists_url";
+"git.api.rate.limit.url" = "rate_limit_url";
+"git.api.repository.search.url" = "repository_search_url";
+"git.api.repository.url" = "repository_url";
+"git.api.starred.gists.url" = "starred_gists_url";
+"git.api.starred.url" = "starred_url";
+"git.api.user.organizations.url" = "user_organizations_url";
+"git.api.user.repositories.url" = "user_repositories_url";
+"git.api.user.search.url" = "user_search_url";
+"git.api.user.url" = "user_url";

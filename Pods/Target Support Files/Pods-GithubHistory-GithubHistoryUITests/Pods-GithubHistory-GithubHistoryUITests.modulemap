@@ -1,0 +1,6 @@
+framework module Pods_GithubHistory_GithubHistoryUITests {
+  umbrella header "Pods-GithubHistory-GithubHistoryUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

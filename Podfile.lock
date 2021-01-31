@@ -1,0 +1,70 @@
+PODS:
+  - Alamofire (5.2.2)
+  - Cache (5.3.0)
+  - ESPullToRefresh (2.9.3)
+  - Localize-Swift (3.1.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Realm (5.3.6):
+    - Realm/Headers (= 5.3.6)
+  - Realm/Headers (5.3.6)
+  - RealmSwift (5.3.6):
+    - Realm (= 5.3.6)
+  - SnapKit (5.0.1)
+  - SwiftDate (6.2.0)
+  - SwiftySwift (3.0.0):
+    - SwiftySwift/Cocoa (= 3.0.0)
+    - SwiftySwift/Core (= 3.0.0)
+    - SwiftySwift/Geometry (= 3.0.0)
+    - SwiftySwift/MultiRange (= 3.0.0)
+    - SwiftySwift/UIKit (= 3.0.0)
+  - SwiftySwift/Cocoa (3.0.0):
+    - SwiftySwift/Core
+  - SwiftySwift/Core (3.0.0)
+  - SwiftySwift/Geometry (3.0.0):
+    - SwiftySwift/Core
+  - SwiftySwift/MultiRange (3.0.0)
+  - SwiftySwift/UIKit (3.0.0):
+    - SwiftySwift/Cocoa
+
+DEPENDENCIES:
+  - Alamofire
+  - Cache
+  - ESPullToRefresh
+  - Localize-Swift
+  - Moya
+  - RealmSwift
+  - SnapKit
+  - SwiftDate
+  - SwiftySwift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Cache
+    - ESPullToRefresh
+    - Localize-Swift
+    - Moya
+    - Realm
+    - RealmSwift
+    - SnapKit
+    - SwiftDate
+    - SwiftySwift
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Cache: 48762993ec44e1d93483c4d4a13edd18452326f4
+  ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
+  Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Realm: cd400dd7e5b5bb5c8ae9842eecd73792369e6ec0
+  RealmSwift: 99a16dbdee5d6dfb3d91d56088a9f8c15c0871d1
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftDate: d117c3eb6beed72e47d3f4d1e3bc63fa1e66d7c3
+  SwiftySwift: dfb02560bec08882d6daff3603d9e5738af92ab3
+
+PODFILE CHECKSUM: 94fb28151f3cca1d953fadf759ab5921623c4e22
+
+COCOAPODS: 1.9.1

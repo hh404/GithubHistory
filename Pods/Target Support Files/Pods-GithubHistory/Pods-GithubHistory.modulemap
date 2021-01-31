@@ -1,0 +1,6 @@
+framework module Pods_GithubHistory {
+  umbrella header "Pods-GithubHistory-umbrella.h"
+
+  export *
+  module * { export * }
+}
