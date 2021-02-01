@@ -12,6 +12,7 @@ PODS:
   - Realm/Headers (5.3.6)
   - RealmSwift (5.3.6):
     - Realm (= 5.3.6)
+  - Schedule (2.1.0)
   - SnapKit (5.0.1)
   - SwiftDate (6.2.0)
   - SwiftySwift (3.0.0):
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - Localize-Swift
   - Moya
   - RealmSwift
+  - Schedule
   - SnapKit
   - SwiftDate
   - SwiftySwift
@@ -49,6 +51,7 @@ SPEC REPOS:
     - Moya
     - Realm
     - RealmSwift
+    - Schedule
     - SnapKit
     - SwiftDate
     - SwiftySwift
@@ -61,10 +64,11 @@ SPEC CHECKSUMS:
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Realm: cd400dd7e5b5bb5c8ae9842eecd73792369e6ec0
   RealmSwift: 99a16dbdee5d6dfb3d91d56088a9f8c15c0871d1
+  Schedule: 00e6d7bbdbdb000fd1f51a7d10e9f88a8c451fda
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftDate: d117c3eb6beed72e47d3f4d1e3bc63fa1e66d7c3
   SwiftySwift: dfb02560bec08882d6daff3603d9e5738af92ab3
 
-PODFILE CHECKSUM: 94fb28151f3cca1d953fadf759ab5921623c4e22
+PODFILE CHECKSUM: 3439a7b95a5c2fe8d287dddd3ccc60c49ac27de6
 
 COCOAPODS: 1.9.1

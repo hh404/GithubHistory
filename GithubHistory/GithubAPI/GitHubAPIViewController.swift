@@ -96,6 +96,7 @@ extension GithubAPIResponse.CodingKeys {
 class GitHubAPIViewController: UIViewController {
     private var tableView = UITableView(frame: .zero, style: .plain)
     private var githubAPI: GithubAPI?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

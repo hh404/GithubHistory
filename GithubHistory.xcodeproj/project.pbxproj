@@ -22,6 +22,8 @@
 		EC6BA78925C6D6A9001ACFBE /* GitHubAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6BA78825C6D6A9001ACFBE /* GitHubAPIViewController.swift */; };
 		EC6BA7BB25C6DDBA001ACFBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC6BA7BD25C6DDBA001ACFBE /* Localizable.strings */; };
 		EC6BA7C325C6F18F001ACFBE /* GithubAPITCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6BA7C225C6F18F001ACFBE /* GithubAPITCell.swift */; };
+		EC6BA7EB25C70533001ACFBE /* GithubAPIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6BA7EA25C70532001ACFBE /* GithubAPIRequestManager.swift */; };
+		EC6BA7FF25C85F29001ACFBE /* APIRequestQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6BA7FE25C85F29001ACFBE /* APIRequestQueueManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		EC6BA7BC25C6DDBA001ACFBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC6BA7BE25C6DDBE001ACFBE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC6BA7C225C6F18F001ACFBE /* GithubAPITCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPITCell.swift; sourceTree = "<group>"; };
+		EC6BA7EA25C70532001ACFBE /* GithubAPIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIRequestManager.swift; sourceTree = "<group>"; };
+		EC6BA7FE25C85F29001ACFBE /* APIRequestQueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestQueueManager.swift; sourceTree = "<group>"; };
 		FC4EAC66BCB12CAF32A43743 /* Pods-GithubHistory-GithubHistoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubHistory-GithubHistoryUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubHistory-GithubHistoryUITests/Pods-GithubHistory-GithubHistoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +154,7 @@
 		EC6BA71E25C45996001ACFBE /* GithubHistory */ = {
 			isa = PBXGroup;
 			children = (
+				EC6BA7FD25C85F10001ACFBE /* NetEngine */,
 				EC6BA78225C6D5E3001ACFBE /* GithubAPI */,
 				EC6BA7AD25C6DD68001ACFBE /* Resources */,
 				EC6BA71F25C45996001ACFBE /* AppDelegate.swift */,
@@ -187,6 +192,7 @@
 				EC6BA78325C6D63B001ACFBE /* GithubAPIResponse.swift */,
 				EC6BA78825C6D6A9001ACFBE /* GitHubAPIViewController.swift */,
 				EC6BA7C225C6F18F001ACFBE /* GithubAPITCell.swift */,
+				EC6BA7EA25C70532001ACFBE /* GithubAPIRequestManager.swift */,
 			);
 			path = GithubAPI;
 			sourceTree = "<group>";
@@ -197,6 +203,14 @@
 				EC6BA7BD25C6DDBA001ACFBE /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC6BA7FD25C85F10001ACFBE /* NetEngine */ = {
+			isa = PBXGroup;
+			children = (
+				EC6BA7FE25C85F29001ACFBE /* APIRequestQueueManager.swift */,
+			);
+			path = NetEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,10 +455,12 @@
 			files = (
 				EC6BA72425C45996001ACFBE /* ViewController.swift in Sources */,
 				EC6BA72025C45996001ACFBE /* AppDelegate.swift in Sources */,
+				EC6BA7FF25C85F29001ACFBE /* APIRequestQueueManager.swift in Sources */,
 				EC6BA78425C6D63B001ACFBE /* GithubAPIResponse.swift in Sources */,
 				EC6BA78925C6D6A9001ACFBE /* GitHubAPIViewController.swift in Sources */,
 				EC6BA7C325C6F18F001ACFBE /* GithubAPITCell.swift in Sources */,
 				EC6BA72225C45996001ACFBE /* SceneDelegate.swift in Sources */,
+				EC6BA7EB25C70533001ACFBE /* GithubAPIRequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

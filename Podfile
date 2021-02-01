@@ -15,6 +15,7 @@ target 'GithubHistory' do
   pod 'SnapKit'
   pod 'Localize-Swift'
   pod 'SwiftDate'
+  pod 'Schedule'
 
   target 'GithubHistoryTests' do
     inherit! :search_paths
