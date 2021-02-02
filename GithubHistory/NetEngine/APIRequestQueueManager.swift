@@ -45,12 +45,12 @@ class APIRequestQueueManager {
     var responseHandlers: [String: ResponseHandler] = [:]
     
     private let synchronizationQueue: DispatchQueue = {
-        let name = String(format: "git.api.synchronizationqueue", arc4random(), arc4random())
+        let name = String(format: "git.api.synchronizationqueue")
         return DispatchQueue(label: name)
     }()
     
     private let responseQueue: DispatchQueue = {
-        let name = String(format: "git.api.responsequeue", arc4random(), arc4random())
+        let name = String(format: "git.api.responsequeue")
         return DispatchQueue(label: name, attributes: .concurrent)
     }()
     
@@ -132,12 +132,22 @@ class APIRequestQueueManager {
                     var cachedAPI: GithubAPIResponse?
                     
                     if let cacheKey = cacheKey {
-                        self.storage.async.object(forKey: cacheKey) { result in
-                            switch result {
-                            case .value(let api):
-                                cachedAPI = api
-                            case .error(_):
-                                break
+                        print("🟪\(cacheKey)")
+                        do {
+                            self.storage.async.existsObject(forKey: cacheKey) { (result) in
+                                switch result {
+                                case .value(_):
+                                    self.storage.async.object(forKey: cacheKey) { result in
+                                        switch result {
+                                        case .value(let api):
+                                            cachedAPI = api
+                                        case .error(_):
+                                            break
+                                        }
+                                    }
+                                case .error(_):
+                                    break
+                                }
                             }
                         }
                     }

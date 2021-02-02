@@ -16,6 +16,9 @@ target 'GithubHistory' do
   pod 'Localize-Swift'
   pod 'SwiftDate'
   pod 'Schedule'
+  pod 'Repeat'
+  pod 'RandomColorSwift'
+  pod 'NVActivityIndicatorView'
 
   target 'GithubHistoryTests' do
     inherit! :search_paths
