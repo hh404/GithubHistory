@@ -137,7 +137,34 @@ protocol ViewModelDelegate: class {
 
 protocol GitAPIViewEventHandle: viewEventHandle{
     func saveBtnClicked()
-    func historyBtnClicked()
+    func historyBtnClicked(view: UIViewController)
+}
+
+extension Notification.Name {
+    static let DidRequestSuccess = Notification.Name("GitAPIDidRequestSuccess")
+}
+
+enum GithubAPIRequestViewItem {
+    case requestTimeLabel
+    case loadingIndicator
+    case gotoHistoryBtn
+    case saveResponseBtn
+    case responseTextView
+    
+    func accessbilityID() -> String {
+        switch self {
+        case .requestTimeLabel:
+            return "git.api.request.time.label"
+        case .loadingIndicator:
+            return "git.api.loading.indicator"
+        case .gotoHistoryBtn:
+            return "git.api.goto.history.btn"
+        case .saveResponseBtn:
+            return "git.api.save.response.btn"
+        case .responseTextView:
+            return "git.api.response.text.view"
+        }
+    }
 }
 
 class GithubAPIRequestViewModel {
@@ -186,13 +213,14 @@ class GithubAPIRequestViewModel {
                 let receipt = APIRequestQueueManager.default.requestGitAPI(URLRequest(url: URL(string: "https://api.github.com/")!), cacheKey: githubAPI.dateIntervalKey(), receiptID: UUID().uuidString) {[weak self] (response) in
                     switch response.result {
                     case .success(let model):
-                        if let items = (self?.build(response: model)) {
-                            githubAPI.items = items
-                            self?.githubAPIs.append(githubAPI)
-                            DispatchQueue.main.async {
-                                if self?.delegate != nil {
-                                    self?.delegate?.requestDidFinishSuccess(with: response.data)
-                                }
+                        let items = (GithubAPIRequestViewModel.build(response: model))
+                        githubAPI.items = items
+                        self?.githubAPIs.append(githubAPI)
+                        DispatchQueue.main.async {
+                            print("🀄️🀄️Requet post")
+                            NotificationCenter.default.post(name: NSNotification.Name.DidRequestSuccess, object: self?.cacheKeyArray, userInfo: nil)
+                            if self?.delegate != nil {
+                                self?.delegate?.requestDidFinishSuccess(with: response.data)
                             }
                         }
                     case .failure(_):
@@ -207,7 +235,7 @@ class GithubAPIRequestViewModel {
         self.timer?.start()
     }
     
-    private func build(response: GithubAPIResponse) -> [GithubAPIItem] {
+    class func build(response: GithubAPIResponse) -> [GithubAPIItem] {
         var items: [GithubAPIItem] = []
         let authorizationsUrlItem =  GithubAPIItem.listItem(apiKey: GithubAPIResponse.CodingKeys.authorizationsUrl.keyCopy(), apiValue: response.authorizationsUrl ?? "")
         items.append(authorizationsUrlItem)
@@ -318,7 +346,10 @@ extension GithubAPIRequestViewModel: GitAPIViewEventHandle {
         }
     }
     
-    func historyBtnClicked() {
-        
+    func historyBtnClicked(view: UIViewController) {
+        let vc = HistoryViewController()
+        let vm = HistroyViewModel(historys: self.cacheKeyArray)
+        vc.viewModel = vm
+        view.navigationController?.pushViewController(vc, animated: true)
     }
 }

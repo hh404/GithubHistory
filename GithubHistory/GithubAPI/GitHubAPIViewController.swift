@@ -26,10 +26,11 @@ class GitHubAPIViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.title = "Request"
+        textView.accessibilityIdentifier = GithubAPIRequestViewItem.responseTextView.accessbilityID()
         self.view.addSubview(textView)
         viewModel.delegate = self
         self.eventHandle = viewModel
-        viewModel.start()
+//        viewModel.start()
         textView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(16)
             make.top.equalToSuperview().offset(64)
@@ -43,6 +44,7 @@ class GitHubAPIViewController: UIViewController {
         requestTimeLabel.font = UIFont.systemFont(ofSize: 12)
         
         let history = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(historyBtnClicked))
+        history.accessibilityIdentifier = GithubAPIRequestViewItem.gotoHistoryBtn.accessbilityID()
         let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(saveBtnClicked))
         let loading = UIBarButtonItem(customView: loadingView)
         loadingView.startAnimating()
@@ -52,7 +54,7 @@ class GitHubAPIViewController: UIViewController {
     }
     
     @objc func historyBtnClicked() {
-        eventHandle?.historyBtnClicked()
+        eventHandle?.historyBtnClicked(view: self)
     }
     
     @objc func saveBtnClicked() {

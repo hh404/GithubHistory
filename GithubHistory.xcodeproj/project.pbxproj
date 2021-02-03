@@ -25,6 +25,7 @@
 		EC6BA7EB25C70533001ACFBE /* GithubAPIRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6BA7EA25C70532001ACFBE /* GithubAPIRequestViewModel.swift */; };
 		EC6BA7FF25C85F29001ACFBE /* APIRequestQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6BA7FE25C85F29001ACFBE /* APIRequestQueueManager.swift */; };
 		EC6BA80825C97967001ACFBE /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6BA80725C97967001ACFBE /* HistoryViewController.swift */; };
+		EC8BB4BC25CAC49700C5D4CB /* HistroyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8BB4BB25CAC49700C5D4CB /* HistroyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		EC6BA7EA25C70532001ACFBE /* GithubAPIRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIRequestViewModel.swift; sourceTree = "<group>"; };
 		EC6BA7FE25C85F29001ACFBE /* APIRequestQueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestQueueManager.swift; sourceTree = "<group>"; };
 		EC6BA80725C97967001ACFBE /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		EC8BB4BB25CAC49700C5D4CB /* HistroyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistroyViewModel.swift; sourceTree = "<group>"; };
 		FC4EAC66BCB12CAF32A43743 /* Pods-GithubHistory-GithubHistoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubHistory-GithubHistoryUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubHistory-GithubHistoryUITests/Pods-GithubHistory-GithubHistoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				EC6BA80725C97967001ACFBE /* HistoryViewController.swift */,
+				EC8BB4BB25CAC49700C5D4CB /* HistroyViewModel.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6BA72425C45996001ACFBE /* ViewController.swift in Sources */,
+				EC8BB4BC25CAC49700C5D4CB /* HistroyViewModel.swift in Sources */,
 				EC6BA72025C45996001ACFBE /* AppDelegate.swift in Sources */,
 				EC6BA7FF25C85F29001ACFBE /* APIRequestQueueManager.swift in Sources */,
 				EC6BA78425C6D63B001ACFBE /* GithubAPIResponse.swift in Sources */,

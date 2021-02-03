@@ -201,8 +201,9 @@ class APIRequestQueueManager {
                                             if let data = response.data {
                                                 let githubAPIResponse = try JSONDecoder().decode(GithubAPIResponse.self,from: data)
                                                 if let cacheKey = cacheKey {
-                                                    self?.storage.async.setObject(githubAPIResponse, forKey: cacheKey) { (storageResult) in
-                                                    }
+                                                    try self?.storage.setObject(githubAPIResponse, forKey: cacheKey)
+//                                                    self?.storage.async.setObject(githubAPIResponse, forKey: cacheKey) { (storageResult) in
+//                                                    }
                                                 }
                                                 
                                                 DispatchQueue.main.async {

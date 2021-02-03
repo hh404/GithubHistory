@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import GithubHistory
 
 class GithubHistoryUITests: XCTestCase {
 
@@ -31,11 +32,70 @@ class GithubHistoryUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
+    
+    func testAPIPageResponseTextView() {
+        let app = XCUIApplication()
+        app.launch()
+        let textView = app.textViews["git.api.response.text.view"]
+        XCTAssert(textView.exists)
+    }
+    
+    func testAPIPageResponseTimesLabel() {
+        let app = XCUIApplication()
+        app.launch()
+        let historyBtn = app.buttons["git.api.goto.history.btn"]
+        historyBtn.tap()
+    }
+    
+    func testAPIHistroyBack() {
+        let app = XCUIApplication()
+        app.launch()
+        let historyBtn = app.buttons["git.api.goto.history.btn"]
+        historyBtn.tap()
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+    }
+
+    func testHistoryTable() {
+        let app = XCUIApplication()
+        app.launch()
+        let historyBtn = app.buttons["git.api.goto.history.btn"]
+        historyBtn.tap()
+        let talbeView = app.tables["git.api.history.tableview"]
+        self.waitForElementToAppear(element: talbeView, timeout: 5)
+        XCTAssert(talbeView.exists)
+        let fullScreenshot = XCUIScreen.main.screenshot()
+        let image = fullScreenshot.image
+        self.saveImage(image: image, name: "testHistoryTable.jpeg")
+    }
+    
+    private func waitForElementToAppear(element: XCUIElement, timeout: TimeInterval = 5) {
+        let existsPredicate = NSPredicate(format: "exists == true")
+        
+        expectation(for: existsPredicate, evaluatedWith: element, handler: nil)
+        
+        waitForExpectations(timeout: timeout) { (error) -> Void in
+            if (error != nil) {
+            }
+        }
+    }
+    
+    private func saveImage(image: UIImage, name: String) {
+        // get the documents directory url
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        // choose a name for your image
+        let fileName = name
+        // create the destination file url to save your image
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        // get your UIImage jpeg data representation and check if the destination file url already exists
+        if let data = image.jpegData(compressionQuality:  1.0)
+          //!FileManager.default.fileExists(atPath: fileURL.path)
+           {
+            do {
+                // writes the image data to disk
+                try data.write(to: fileURL)
+                print("file saved")
+            } catch {
+                print("error saving file:", error)
             }
         }
     }
