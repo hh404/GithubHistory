@@ -30,7 +30,7 @@ class GitHubAPIViewController: UIViewController {
         self.view.addSubview(textView)
         viewModel.delegate = self
         self.eventHandle = viewModel
-//        viewModel.start()
+        viewModel.start()
         textView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(16)
             make.top.equalToSuperview().offset(64)

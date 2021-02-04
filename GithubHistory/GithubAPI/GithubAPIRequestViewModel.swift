@@ -178,7 +178,7 @@ class GithubAPIRequestViewModel {
     private var cacheKeyArray: [String] = []
     weak var delegate: ViewModelDelegate?
     private var timer: Repeater?
-    let storage = try! Storage<[String]>(
+    private let storage = try! Storage<[String]>(
         diskConfig: DiskConfig(name: "Hans_key"),
         memoryConfig: MemoryConfig(),
         transformer: TransformerFactory.forCodable(ofType: [String].self))

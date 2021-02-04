@@ -10,6 +10,9 @@
 		1D4AAA2FBBAB52584E716B44 /* Pods_GithubHistoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBB612563972C464EB91C53 /* Pods_GithubHistoryTests.framework */; };
 		C0A4CB876529F9BE5CD5BFA4 /* Pods_GithubHistory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE5DCBA604CCAF83A1677A5 /* Pods_GithubHistory.framework */; };
 		D3CBA52D77A53EC023736342 /* Pods_GithubHistory_GithubHistoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9310B17F112F3971C553F0FD /* Pods_GithubHistory_GithubHistoryUITests.framework */; };
+		EC57F95A25CC166200EFBC3A /* APIRequestQueueManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57F95925CC166200EFBC3A /* APIRequestQueueManagerTests.swift */; };
+		EC57F95F25CC206200EFBC3A /* GithubAPIRequestViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57F95E25CC206200EFBC3A /* GithubAPIRequestViewModelTests.swift */; };
+		EC57F96425CC3DEE00EFBC3A /* HistroyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57F96325CC3DEE00EFBC3A /* HistroyViewModelTests.swift */; };
 		EC6BA72025C45996001ACFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6BA71F25C45996001ACFBE /* AppDelegate.swift */; };
 		EC6BA72225C45996001ACFBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6BA72125C45996001ACFBE /* SceneDelegate.swift */; };
 		EC6BA72425C45996001ACFBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6BA72325C45996001ACFBE /* ViewController.swift */; };
@@ -54,6 +57,9 @@
 		9BBB612563972C464EB91C53 /* Pods_GithubHistoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubHistoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F8DE47B134EDCE4937E618 /* Pods-GithubHistory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubHistory.release.xcconfig"; path = "Target Support Files/Pods-GithubHistory/Pods-GithubHistory.release.xcconfig"; sourceTree = "<group>"; };
 		C96CFC77E6CA9E61EA56AA6C /* Pods-GithubHistoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubHistoryTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubHistoryTests/Pods-GithubHistoryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC57F95925CC166200EFBC3A /* APIRequestQueueManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestQueueManagerTests.swift; sourceTree = "<group>"; };
+		EC57F95E25CC206200EFBC3A /* GithubAPIRequestViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIRequestViewModelTests.swift; sourceTree = "<group>"; };
+		EC57F96325CC3DEE00EFBC3A /* HistroyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistroyViewModelTests.swift; sourceTree = "<group>"; };
 		EC6BA71C25C45996001ACFBE /* GithubHistory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubHistory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6BA71F25C45996001ACFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC6BA72125C45996001ACFBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +184,9 @@
 			children = (
 				EC6BA73625C45999001ACFBE /* GithubHistoryTests.swift */,
 				EC6BA73825C45999001ACFBE /* Info.plist */,
+				EC57F95925CC166200EFBC3A /* APIRequestQueueManagerTests.swift */,
+				EC57F95E25CC206200EFBC3A /* GithubAPIRequestViewModelTests.swift */,
+				EC57F96325CC3DEE00EFBC3A /* HistroyViewModelTests.swift */,
 			);
 			path = GithubHistoryTests;
 			sourceTree = "<group>";
@@ -484,7 +493,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC57F95A25CC166200EFBC3A /* APIRequestQueueManagerTests.swift in Sources */,
+				EC57F95F25CC206200EFBC3A /* GithubAPIRequestViewModelTests.swift in Sources */,
 				EC6BA73725C45999001ACFBE /* GithubHistoryTests.swift in Sources */,
+				EC57F96425CC3DEE00EFBC3A /* HistroyViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +613,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -656,6 +669,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
